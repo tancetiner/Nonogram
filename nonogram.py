@@ -120,8 +120,8 @@ while running:
     screen.blit(
         text,
         (
-            WINDOW_WIDTH / 20 + text.get_width() / 2,
-            WINDOW_HEIGHT / 20 + text.get_height(),
+            WINDOW_WIDTH / 20,
+            WINDOW_HEIGHT / 20,
         ),
     )
 
@@ -132,6 +132,32 @@ while running:
         (
             WINDOW_WIDTH - WINDOW_WIDTH / 10 - text.get_width(),
             WINDOW_HEIGHT - WINDOW_HEIGHT / 10 - text.get_height(),
+        ),
+    )
+
+    # Print instructions
+    text = font.render("WASD to move", True, (0, 0, 0))
+    screen.blit(
+        text,
+        (
+            WINDOW_WIDTH / 20,
+            WINDOW_HEIGHT - WINDOW_HEIGHT / 10 - 2 * text.get_height(),
+        ),
+    )
+    text = font.render("Enter to fill", True, (0, 0, 0))
+    screen.blit(
+        text,
+        (
+            WINDOW_WIDTH / 20,
+            WINDOW_HEIGHT - WINDOW_HEIGHT / 10 - text.get_height(),
+        ),
+    )
+    text = font.render("Shift to cross", True, (0, 0, 0))
+    screen.blit(
+        text,
+        (
+            WINDOW_WIDTH / 20,
+            WINDOW_HEIGHT - WINDOW_HEIGHT / 10,
         ),
     )
 
